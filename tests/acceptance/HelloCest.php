@@ -10,6 +10,6 @@ class HelloCest
     public function tryToTest(AcceptanceTester $I)
     {
         $I->amOnPage('/');
-        $I->see('hello');
+        $I->see('No Captcha Form Spam Filter');
     }
 }

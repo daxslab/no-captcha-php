@@ -10,6 +10,6 @@ class HelloNoJsCest
     public function tryToTest(AcceptancenojsTester $I)
     {
         $I->amOnPage('/');
-        $I->see('hello');
+        $I->see('No Captcha Form Spam Filter');
     }
 }
