@@ -1,5 +1,30 @@
 {
+    "name": "daxslab/no-captcha",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [
+        "no captcha",
+        "honeypot",
+        "form",
+        "security",
+        "spam"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daxslab",
+            "homepage": "https://www.daxslab.com"
+        }
+    ],
     "require-dev": {
-        "codeception/codeception": "^4.0"
+        "codeception/codeception": "^4.0",
+        "codeception/module-webdriver": "^1.0.0",
+        "codeception/module-asserts": "^1.1",
+        "codeception/module-phpbrowser": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "daxslab\\nocaptcha\\": "lib/"
+        }
     }
 }

@@ -1,8 +1,8 @@
 <?php
-include '../src/rules/RuleInterface.php';
-include '../src/rules/BaseRule.php';
-include '../src/rules/CssHiddenFieldRule.php';
-include '../src/NoCaptchaAntiSpam.php';
+include '../lib/rules/RuleInterface.php';
+include '../lib/rules/BaseRule.php';
+include '../lib/rules/CssHiddenFieldRule.php';
+include '../lib/NoCaptchaAntiSpam.php';
 
 use daxslab\nocaptcha\NoCaptchaAntiSpam;
 use daxslab\nocaptcha\rules\CssHiddenFieldRule;
@@ -54,7 +54,7 @@ include_once('common/header.php');
                 <label for="contactBody">Body</label>
                 <textarea name="contact_email" class="form-control" id="contactBody" placeholder="Write to us"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" name="submit_button" class="btn btn-primary">Submit</button>
             <!--  Include rules form elements  -->
             <?= $noCaptchaAntiSpam->renderRules() ?>
         </form>
