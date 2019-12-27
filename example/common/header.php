@@ -45,6 +45,7 @@
                     <a class="dropdown-item" href="javascript_generated_hidden_field_honeypot.php">Javascript generated hidden field honeypot</a>
                     <a class="dropdown-item" href="session_time_trap.php">Session based time trap</a>
                     <a class="dropdown-item" href="form_time_trap.php">Form based time trap</a>
+                    <a class="dropdown-item" href="cookie_check.php">Cookie check</a>
                     <a class="dropdown-item" href="multiple_rules.php">Multiple rules</a>
                 </div>
             </li>
