@@ -25,13 +25,13 @@ before_script:
 # Test
 test:
   services:
-    - name: selenium/standalone-chrome:3.141.59-oxygen
+    - name: selenium/standalone-chrome
       alias: selenium
 
   stage: Test
   script:
     - LOCAL_IP=$HOSTNAME
     - echo Local IP $LOCAL_IP
-    - sed -i "s/localhost:8134/127.0.0.1:8134/" tests/acceptance.suite.yml
+    - sed -i "s/localhost:8134/$LOCAL_IP:8134/" tests/acceptance.suite.yml
     - sed -i "s/host:\ localhost/host:\ selenium/" tests/acceptance.suite.yml
     - vendor/bin/codecept run
