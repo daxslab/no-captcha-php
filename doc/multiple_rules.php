@@ -13,7 +13,7 @@ use daxslab\nocaptcha\rules\FormTimeTrapRule;
 use daxslab\nocaptcha\rules\JavascriptGeneratedHiddenFieldRule;
 use daxslab\nocaptcha\rules\SessionTimeTrapRule;
 
-$title = "Multiple checks";
+$title = "Multiple rules";
 
 // Session based time trap needs an active session
 session_start();
