@@ -8,5 +8,5 @@ actor: AcceptancenojsTester
 modules:
     enabled:
         - PhpBrowser:
-            url: http://localhost:8134/example/
+            url: http://localhost:8134/doc/
     step_decorators: ~

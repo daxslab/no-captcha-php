@@ -6,5 +6,7 @@
             window.jQuery || document.write('<script src="assets/js/jquery.slim.min.js"><\/script>')
         </script>
         <script src="assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="assets/js/highlight.pack.js" crossorigin="anonymous"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

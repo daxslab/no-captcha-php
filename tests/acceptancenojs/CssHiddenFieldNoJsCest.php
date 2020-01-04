@@ -10,7 +10,7 @@ class CssHiddenFieldNoJsCest
     public function tryToTest(AcceptancenojsTester $I)
     {
         $I->amOnPage('/css_hidden_field_honeypot.php');
-        $I->canSeeInTitle('Basic hidden field honeypot');
+        $I->canSeeInTitle('CSS hidden field honeypot');
         $I->canSeeElement('input[name=css_hidden_field]');
         $I->click('Submit');
         $I->canSee('Form submitted correctly');
