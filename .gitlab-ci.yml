@@ -20,7 +20,7 @@ before_script:
   # Install all project dependencies
   - composer install
   # Run webserver
-  - php -S localhost:8134 &>/dev/null&
+  - php -S 0.0.0.0:8134 &>/dev/null&
 
 # Test
 test:
