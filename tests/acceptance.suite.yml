@@ -10,4 +10,5 @@ modules:
         - WebDriver:
             url: 'http://localhost:8134/doc/'
             browser: chrome
+            host: chrome
     step_decorators: ~
