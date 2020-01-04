@@ -30,7 +30,7 @@ test:
 
   stage: Test
   script:
-    - LOCAL_IP=$(ip route get 8.8.8.8 | awk -F"src " 'NR==1{split($2,a," ");print a[1]}')
+    - LOCAL_IP=$HOSTNAME
     - echo Local IP $LOCAL_IP
     - sed -i "s/localhost:8134/$LOCAL_IP:8134/" tests/acceptance.suite.yml
     - sed -i "s/host:\ localhost/host:\ chrome/" tests/acceptance.suite.yml
