@@ -76,7 +76,7 @@ EOT;
 
 <p>
     Using the <code>checkSubmit()</code> function from the <code>NoCaptchaAntiSpam</code> created instance you can
-    check if any of the Rules declared triggers when the form is submitted:
+    check if any of the declared Rules triggers when the form is submitted:
 </p>
 
 <pre>
