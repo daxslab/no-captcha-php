@@ -29,6 +29,7 @@ test:
   stage: Test
   script:
     # Run webserver
+    - cat /etc/hosts
     - SERVICE_IP=$(cat /etc/hosts | awk '{if ($2 == "service") print $1;}')
     - echo $SERVICE_IP
     - php -S 0.0.0.0:8134 -t doc/ 2> /dev/null &
