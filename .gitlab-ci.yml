@@ -9,7 +9,7 @@ cache:
 
 before_script:
   # Install git and unzip (composer will need them)
-  - apt-get update && apt-get install -qqy git unzip zlib1g-dev
+  - apt-get update && apt-get install -qqy git unzip zlib1g-dev libzip-dev
   # install php extensions
   - docker-php-ext-install zip
 #  - docker-php-ext-install openssl
