@@ -30,7 +30,8 @@ test:
   script:
     # Run webserver
     - cat /etc/hosts
-    - SERVICE_IP=$(cat /etc/hosts | awk '{if ($2 == $HOSTNAME) print $1;}')
+#    - SERVICE_IP=$(cat /etc/hosts | awk '{if ($2 == $HOSTNAME) print $1;}')
+    - SERVICE_IP=172.17.0.3
     - echo $SERVICE_IP
     - php -S 0.0.0.0:8134 -t doc/ 2> /dev/null &
     - sed -i "s/localhost:8134/$SERVICE_IP:8134/" tests/acceptance.suite.yml
