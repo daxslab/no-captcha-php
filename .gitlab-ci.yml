@@ -35,4 +35,5 @@ test:
     - php -S 0.0.0.0:8134 -t doc/ 2> /dev/null &
     - sed -i "s/localhost:8134/$SERVICE_IP:8134/" tests/acceptance.suite.yml
     - sed -i "s/host:\ localhost/host:\ selenium/" tests/acceptance.suite.yml
+    - cat tests/acceptance.suite.yml
     - vendor/bin/codecept run
