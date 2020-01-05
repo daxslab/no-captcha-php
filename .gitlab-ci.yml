@@ -29,7 +29,7 @@ test:
   stage: Test
   script:
     # Run webserver
-    - ADDRESS=`awk -v hostname="$HOSTANME" '{if ($2 == hostname) print $1;}' /etc/hosts`
+    - ADDRESS=`awk -v hostname="$HOSTNAME" '{if ($2 == hostname) print $1;}' /etc/hosts`
     - php -S 0.0.0.0:8134 -t doc/ 2> /dev/null &
     - sed -i "s/localhost:8134/$ADDRESS:8134/" tests/acceptance.suite.yml
     - sed -i "s/host:\ localhost/host:\ selenium/" tests/acceptance.suite.yml
