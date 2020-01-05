@@ -1,5 +1,3 @@
-# Select image from https://hub.docker.com/_/php/
-image: php:7.0
 
 stages:
   - Test
@@ -19,18 +17,76 @@ before_script:
   - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
   # Install all project dependencies
   - composer install
+  # Run webserver
+  - php -S 0.0.0.0:8134 -t doc/ 2> /dev/null &
 
 # Test
-test:
+test:7.0:
+  image: php:7.0
   services:
     - name: selenium/standalone-chrome
       alias: selenium
-
   stage: Test
   script:
-    # Run webserver
+    # Get container ip address
     - ADDRESS=`awk -v hostname="$HOSTNAME" '{if ($2 == hostname) print $1;}' /etc/hosts`
+    # Run webserver
     - php -S 0.0.0.0:8134 -t doc/ 2> /dev/null &
+    # Replace address in CodeCeption config
     - sed -i "s/localhost:8134/$ADDRESS:8134/" tests/acceptance.suite.yml
+    # Replace host in codeception config
     - sed -i "s/host:\ localhost/host:\ selenium/" tests/acceptance.suite.yml
+    # run tests
+    - vendor/bin/codecept run
+
+test:7.1:
+  image: php:7.1
+  services:
+    - name: selenium/standalone-chrome
+      alias: selenium
+  stage: Test
+  script:
+    # Get container ip address
+    - ADDRESS=`awk -v hostname="$HOSTNAME" '{if ($2 == hostname) print $1;}' /etc/hosts`
+    # Replace address in CodeCeption config
+    - sed -i "s/localhost:8134/$ADDRESS:8134/" tests/acceptance.suite.yml
+    # Replace host in codeception config
+    - sed -i "s/host:\ localhost/host:\ selenium/" tests/acceptance.suite.yml
+    # run tests
+    - vendor/bin/codecept run
+
+test:7.2:
+  image: php:7.2
+  services:
+    - name: selenium/standalone-chrome
+      alias: selenium
+  stage: Test
+  script:
+    # Get container ip address
+    - ADDRESS=`awk -v hostname="$HOSTNAME" '{if ($2 == hostname) print $1;}' /etc/hosts`
+    # Run webserver
+    - php -S 0.0.0.0:8134 -t doc/ 2> /dev/null &
+    # Replace address in CodeCeption config
+    - sed -i "s/localhost:8134/$ADDRESS:8134/" tests/acceptance.suite.yml
+    # Replace host in codeception config
+    - sed -i "s/host:\ localhost/host:\ selenium/" tests/acceptance.suite.yml
+    # run tests
+    - vendor/bin/codecept run
+
+test:7.3:
+  image: php:7.3
+  services:
+    - name: selenium/standalone-chrome
+      alias: selenium
+  stage: Test
+  script:
+    # Get container ip address
+    - ADDRESS=`awk -v hostname="$HOSTNAME" '{if ($2 == hostname) print $1;}' /etc/hosts`
+    # Run webserver
+    - php -S 0.0.0.0:8134 -t doc/ 2> /dev/null &
+    # Replace address in CodeCeption config
+    - sed -i "s/localhost:8134/$ADDRESS:8134/" tests/acceptance.suite.yml
+    # Replace host in codeception config
+    - sed -i "s/host:\ localhost/host:\ selenium/" tests/acceptance.suite.yml
+    # run tests
     - vendor/bin/codecept run
