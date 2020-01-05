@@ -19,8 +19,6 @@ before_script:
   - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
   # Install all project dependencies
   - composer install
-  # Run webserver
-  - php -S 0.0.0.0:8134 &>/dev/null&
 
 # Test
 test:
@@ -30,8 +28,8 @@ test:
 
   stage: Test
   script:
-    - LOCAL_IP=$HOSTNAME
-    - echo Local IP $LOCAL_IP
-    - sed -i "s/localhost:8134/$LOCAL_IP:8134/" tests/acceptance.suite.yml
+    # Run webserver
+    - php -S 0.0.0.0:8134 -t doc/ 2> /dev/null &
+    - sed -i "s/localhost:8134/$HOSTNAME:8134/" tests/acceptance.suite.yml
     - sed -i "s/host:\ localhost/host:\ selenium/" tests/acceptance.suite.yml
     - vendor/bin/codecept run

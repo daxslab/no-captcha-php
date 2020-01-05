@@ -8,7 +8,7 @@ actor: AcceptanceTester
 modules:
     enabled:
         - WebDriver:
-            url: 'http://localhost:8134/doc/'
+            url: 'http://localhost:8134/'
             browser: chrome
             host: localhost
     step_decorators: ~
