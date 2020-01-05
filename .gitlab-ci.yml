@@ -29,7 +29,9 @@ test:
   stage: Test
   script:
     # Run webserver
+    - SERVICE_IP=$(cat /etc/hosts | awk '{if ($2 == "service") print $1;}')
+    - echo $SERVICE_IP
     - php -S 0.0.0.0:8134 -t doc/ 2> /dev/null &
-    - sed -i "s/localhost:8134/$HOSTNAME:8134/" tests/acceptance.suite.yml
+    - sed -i "s/localhost:8134/$SERVICE_IP:8134/" tests/acceptance.suite.yml
     - sed -i "s/host:\ localhost/host:\ selenium/" tests/acceptance.suite.yml
     - vendor/bin/codecept run
