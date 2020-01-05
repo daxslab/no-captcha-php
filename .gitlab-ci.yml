@@ -12,7 +12,6 @@ before_script:
   - apt-get update && apt-get install -qqy git unzip zlib1g-dev libzip-dev
   # install php extensions
   - docker-php-ext-install zip
-#  - docker-php-ext-install openssl
   # Install composer
   - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
   # Install all project dependencies
