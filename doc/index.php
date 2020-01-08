@@ -99,6 +99,7 @@ if ($_POST){
 <ul>
     <li><a href="css_hidden_field_honeypot.php"><code>CssHiddenFieldRule</code></a>: A honeypot field hidden ussing CSS</li>
     <li><a href="javascript_generated_hidden_field_honeypot.php"><code>JavascriptGeneratedHiddenFieldRule</code></a>: A honeypot field generated ussing JavaScript</li>
+    <li><a href="javascript_filled_input.php"><code>JavascriptFilledInputRule</code></a>: A JavaScript filled hidden input</li>
     <li><a href="session_time_trap.php"><code>SessionTimeTrapRule</code></a>: A time trap using session stored variables</li>
     <li><a href="form_time_trap.php"><code>FormTimeTrapRule</code></a>: A time trap using a form field</li>
     <li><a href="cookie_check.php"><code>CookieCheckRule</code></a>: A cookie verification</li>
