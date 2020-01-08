@@ -108,6 +108,14 @@ if ($_POST){
     A <code>NoCaptchaAntiSpam</code> instance can contain one or <a href="multiple_rules.php">multiple rules</a>.
 </p>
 
+<h3>Random field names</h3>
+
+<p>
+    Random field names can be applied for an extra security layer, they are stored in PHP sessions and rules field names
+    will change making difficult to bots identify them. Random field names cam be applied to
+    <a href="random_field_name.php">single rules</a> or <a href="multiple_random_field_names.php">multiple rules</a>.
+</p>
+
 <?php
 include_once('common/footer.php');
 ?>

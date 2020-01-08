@@ -48,6 +48,8 @@
                     <a class="dropdown-item" href="form_time_trap.php">Form based time trap</a>
                     <a class="dropdown-item" href="cookie_check.php">Cookie check</a>
                     <a class="dropdown-item" href="multiple_rules.php">Multiple rules</a>
+                    <a class="dropdown-item" href="random_field_name.php">Random field name</a>
+                    <a class="dropdown-item" href="multiple_random_field_names.php">Multiple random field names</a>
                 </div>
             </li>
         </ul>
