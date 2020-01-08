@@ -7,7 +7,7 @@ include '../lib/NoCaptchaAntiSpam.php';
 use daxslab\nocaptcha\NoCaptchaAntiSpam;
 use daxslab\nocaptcha\rules\JavascriptFilledInputRule;
 
-$title = "Javascript filled input";
+$title = "JavaScript filled input";
 
 // Declare no captcha anti spam object with javascript based hidden field check
 $noCaptchaAntiSpam = NoCaptchaAntiSpam::create([
