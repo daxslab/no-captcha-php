@@ -33,7 +33,7 @@ include_once('common/header.php');
         <h1><?= $title ?></h1>
 
         <p>
-            A time trap will trigger when a form is submitted too fast. The form based time trap will include a hidden
+            A time trap will be triggered when a form is submitted too fast. The form based time trap will include a hidden
             input field containing an encrypted timestamp. Unlike <a href="session_time_trap.php">Session based time trap</a>,
             the form based time trap doesn't need active PHP sessions and can allow form submissions from multiple tabs.
         </p>

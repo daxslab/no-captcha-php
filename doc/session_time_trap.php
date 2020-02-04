@@ -34,7 +34,7 @@ include_once('common/header.php');
         <h1><?= $title ?></h1>
 
         <p>
-            A time trap will trigger when a form is submitted too fast. The session based time trap will use a PHP
+            A time trap will be triggered when a form is submitted too fast. The session based time trap will use a PHP
             session variable to store a timestamp. This rule doesn't include any extra data in forms, so will be
             complete hidden to bots. Unlike <a href="form_time_trap.php">Form based time trap</a>, PHP sessions
             needs to be enabled and form can be submitted from multiple tabs.
@@ -42,7 +42,7 @@ include_once('common/header.php');
 
         <h2>Example:</h2>
 
-        <!--  show an alert message if is a bot submit  -->
+        <!--  show an alert message if it's a bot submit  -->
         <?php if ($_POST): ?>
             <?php if ($noCaptchaAntiSpam->checkSubmit()): ?>
                 <div class="alert alert-success" role="alert">
