@@ -4,18 +4,18 @@
 No Captcha Form Spam Filter is a PHP utility library for dealing with 
 spam bots using unobtrusive and user friendly techniques.
 
-Applaying this techniques will help to reduce the span in your sites in 
+Applying this techniques will help to reduce the span in your sites in 
 more than 90% and users will not be annoyed with intrusive Captchas or 
 extra fields.
 
 ## The NoCaptchaAntiSpam Class
 
-The NoCaptchaAntiSpam Class can be used to declare Protection Rules, 
+The `NoCaptchaAntiSpam` Class can be used to declare Protection Rules, 
 Include security code in forms and check if the form submission does 
 not trigger any rule validation.
 
-For creating an instance of the NoCaptchaAntiSpam Class, the create() 
-static function can be used:
+For creating an instance of the `NoCaptchaAntiSpam` Class, the `create()` 
+static function can be used: 
     
 ```php
 use daxslab\nocaptcha\NoCaptchaAntiSpam;
@@ -34,8 +34,8 @@ $noCaptchaAntiSpam = NoCaptchaAntiSpam::create([
 
 ## Including form elements
 
-Using the NoCaptchaAntiSpam created instance you can include the needed 
-elements inside a form with the renderRules() function:
+Using the `NoCaptchaAntiSpam` created instance you can include the needed 
+elements inside a form with the `renderRules()` function:
 
 ```php
 <form id="contactForm" method="post">
@@ -53,9 +53,9 @@ elements inside a form with the renderRules() function:
 
 ## Verifying form submission
 
-Using the checkSubmit() function from the NoCaptchaAntiSpam created 
+Using the `checkSubmit()` function from the `NoCaptchaAntiSpam` created 
 instance you can check if any of the declared Rules triggers when the 
-form is submitted:
+form is submitted: 
 
 ```php
 if ($_POST){
@@ -69,23 +69,23 @@ if ($_POST){
 
 ## Rules
 
-Rule classes implements different security checks including:
+Rule classes implements different security checks including: 
 
-- CssHiddenFieldRule: A honeypot field hidden ussing CSS
-- JavascriptGeneratedHiddenFieldRule: A honeypot field generated ussing JavaScript
-- JavascriptFilledInputRule: A JavaScript filled hidden input
-- SessionTimeTrapRule: A time trap using session stored variables
-- FormTimeTrapRule: A time trap using a form field
-- CookieCheckRule: A cookie verification
+- `CssHiddenFieldRule`: A honeypot field hidden using CSS
+- `JavascriptGeneratedHiddenFieldRule`: A honeypot field generated using JavaScript
+- `JavascriptFilledInputRule`: A JavaScript filled hidden input
+- `SessionTimeTrapRule`: A time trap using session stored variables
+- `FormTimeTrapRule`: A time trap using a form field
+- `CookieCheckRule`: A cookie verification
 
-A NoCaptchaAntiSpam instance can contain one or multiple rules.
+A `NoCaptchaAntiSpam` instance can contain one or multiple rules.
 
 ## Random field names
 
 Random field names can be applied for an extra security layer, they are 
 stored in PHP sessions and rules field names will change making 
-difficult to bots identify them. Random field names cam be applied 
-to single rules or multiple rules.
+difficult to bots identify them. Random field names cam be applied to 
+single rules or multiple rules. 
 
 ## Documentation
 
