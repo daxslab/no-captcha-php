@@ -38,7 +38,7 @@ include_once('common/header.php');
 
         <h2>Example:</h2>
 
-        <!--  show an alert message if is a bot submit  -->
+        <!--  show an alert message if it's a bot submit  -->
         <?php if ($_POST): ?>
             <?php if ($noCaptchaAntiSpam->checkSubmit()): ?>
                 <div class="alert alert-success" role="alert">

@@ -12,7 +12,7 @@ include_once('common/header.php');
 
 <p>No Captcha Form Spam Filter is a PHP utility library for dealing with spam bots using unobtrusive and user friendly techniques.</p>
 
-<p>Applaying this techniques will help to reduce the span in your sites in more than 90% and users will not be annoyed with intrusive Captchas or extra fields.</p>
+<p>Applying this techniques will help to reduce the span in your sites in more than 90% and users will not be annoyed with intrusive Captchas or extra fields.</p>
 
 <h2>The NoCaptchaAntiSpam Class</h2>
 
@@ -97,8 +97,8 @@ if ($_POST){
     Rule classes implements different security checks including:
 </p>
 <ul>
-    <li><a href="css_hidden_field_honeypot.php"><code>CssHiddenFieldRule</code></a>: A honeypot field hidden ussing CSS</li>
-    <li><a href="javascript_generated_hidden_field_honeypot.php"><code>JavascriptGeneratedHiddenFieldRule</code></a>: A honeypot field generated ussing JavaScript</li>
+    <li><a href="css_hidden_field_honeypot.php"><code>CssHiddenFieldRule</code></a>: A honeypot field hidden using CSS</li>
+    <li><a href="javascript_generated_hidden_field_honeypot.php"><code>JavascriptGeneratedHiddenFieldRule</code></a>: A honeypot field generated using JavaScript</li>
     <li><a href="javascript_filled_input.php"><code>JavascriptFilledInputRule</code></a>: A JavaScript filled hidden input</li>
     <li><a href="session_time_trap.php"><code>SessionTimeTrapRule</code></a>: A time trap using session stored variables</li>
     <li><a href="form_time_trap.php"><code>FormTimeTrapRule</code></a>: A time trap using a form field</li>
