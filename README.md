@@ -99,7 +99,7 @@ A `NoCaptchaAntiSpam` instance can contain one or multiple rules.
 
 Random field names can be applied for an extra security layer, they are 
 stored in PHP sessions and rules field names will change making 
-difficult to bots identify them. Random field names cam be applied to 
+difficult to bots identify them. Random field names can be applied to 
 single rules or multiple rules. 
 
 ## Documentation

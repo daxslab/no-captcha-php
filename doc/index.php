@@ -127,7 +127,7 @@ if ($_POST){
 
 <p>
     Random field names can be applied for an extra security layer, they are stored in PHP sessions and rules field names
-    will change making difficult to bots identify them. Random field names cam be applied to
+    will change making difficult to bots identify them. Random field names can be applied to
     <a href="random_field_name.php">single rules</a> or <a href="multiple_random_field_names.php">multiple rules</a>.
 </p>
 
