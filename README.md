@@ -10,7 +10,18 @@ extra fields.
 
 ## Installation
 
-`composer require daxslab/no-captcha`
+You can download it and place it on your third party libraries folder 
+but we highly recommend that you install it through composer.
+
+Either run
+
+`$ composer require daxslab/no-captcha`
+
+or add
+
+`"daxslab/no-captcha": "~1.0"`
+
+to the `require` section of your `composer.json` file.
 
 ## The NoCaptchaAntiSpam Class
 

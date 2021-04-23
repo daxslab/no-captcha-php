@@ -16,7 +16,17 @@ include_once('common/header.php');
 
 <h2>Installation</h2>
 
-<pre><code>composer require daxslab/no-captcha</code></pre>
+<p>You can download it and place it on your third party libraries folder but we highly recommend that you install it through composer.</p>
+
+<p>Either run</p>
+
+<pre><code>$ composer require daxslab/no-captcha</code></pre>
+
+<p>or add</p>
+
+<pre><code>"daxslab/no-captcha": "~1.0"</code></pre>
+
+<p>to the <code>require</code> section of your <code>composer.json</code> file.</p>
 
 <h2>The NoCaptchaAntiSpam Class</h2>
 
