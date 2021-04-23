@@ -3,9 +3,6 @@
 
 namespace daxslab\nocaptcha\rules;
 
-
-use function GuzzleHttp\Psr7\str;
-
 class BaseRule implements RuleInterface
 {
 
