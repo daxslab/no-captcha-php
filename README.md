@@ -8,6 +8,10 @@ Applying this techniques will help to reduce the span in your sites in
 more than 90% and users will not be annoyed with intrusive Captchas or 
 extra fields.
 
+## Installation
+
+`composer require daxslab/no-captcha`
+
 ## The NoCaptchaAntiSpam Class
 
 The `NoCaptchaAntiSpam` Class can be used to declare Protection Rules, 

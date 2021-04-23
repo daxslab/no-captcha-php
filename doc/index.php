@@ -14,6 +14,10 @@ include_once('common/header.php');
 
 <p>Applying this techniques will help to reduce the span in your sites in more than 90% and users will not be annoyed with intrusive Captchas or extra fields.</p>
 
+<h2>Installation</h2>
+
+<pre><code>composer require daxslab/no-captcha</code></pre>
+
 <h2>The NoCaptchaAntiSpam Class</h2>
 
 <p>
